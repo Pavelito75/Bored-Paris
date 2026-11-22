@@ -1,92 +1,36 @@
+# bored. Paris Edition – Plateforme Anti-Ennui & Carte Interactive Leaflet
 
-# QuanticFactory Test – Plateforme de Recherche
-
-
-Bienvenue sur **QuanticFactory Test** !
-Ce projet est un test technique réalisé en 5 jours pour l’entreprise QuanticFactory, développé avec **Next.js** (React) côté front-end.
-Il utilise les API **OpenDataParis** pour la recherche d’activités et de lieux.
+Bienvenue sur **bored. Paris Edition** !
+Application web Next.js inspirée du style et de l'univers de **bored.com**, intégrant une **carte interactive Leaflet** pour épingler les activités et lieux parisiens en open data.
 
 ---
 
-## Fonctionnalités principales
+## 🌟 Nouvelles Fonctionnalités
 
-- Recherche d’activités et de lieux
-- Filtrage par arrondissement et type d’activité
-- Géolocalisation pour trouver des résultats proches
-- Interface moderne
-- Utilisation de polices personnalisées (Nexa)
+### 🗺️ Carte Interactive Leaflet
+- **Épinglage dynamique** de tous les points et activités avec coordonnées GPS (Fontaines, Parcs, Espaces verts, Équipements sportifs, Musées...).
+- **Pins néon personnalisés (SVG DivIcons)** avec code couleur par catégorie (Cyan = Fontaines, Vert = Parcs, Jaune = Sports/Loisirs, Violet = Musées/Culture, Rouge = Autres).
+- **Popups interactives style Bored.com** : nom, catégorie, statut gratuit/payant, adresse, horaires d'ouverture, distance GPS et liens directs vers l'itinéraire Google Maps.
+- **Support de la géolocalisation** avec marqueur radar animé (*"Vous êtes ici"*).
+- **Contrôles de carte** : recentrage automatique sur les points filtrés, centrage sur la position utilisateur, et bascule de style de carte (Mode sombre CartoDB Dark Matter / Mode clair).
+- **Navigation synchronisée** : cliquer sur *"📍 Carte"* dans le tableau ou tirer un lieu au sort centre automatiquement la carte et ouvre la popup correspondante.
 
----
-
-## Documentation technique
-
-### Front-end (client)
-
-- **Next.js** (React, JavaScript)
-- Structure :
-	```
-	quantic/
-	├── public/              # Fichiers publics (polices, images)
-	│   └── nexa/            # Polices Nexa
-	├── src/
-	│   ├── app/             # Pages principales (layout, page, api)
-	│   └── components/      # Composants UI (filtres, barre de recherche, géolocalisation)
-	├── package.json         # Dépendances et scripts
-	├── next.config.mjs      # Configuration Next.js
-	├── jsconfig.json        # Configuration JS
-	└── README.md            # Documentation
-	```
+### 🎨 Design & CSS style Bored.com
+- **Palette Dark Arcade** : fonds sombres profonds (`#0c0e17`), cartes à bordures néon rétro, accents vibrants (Rouge/Corail `#ff3366`, Cyan électrique `#00f0ff`, Jaune arcade `#ffe600`).
+- **En-tête de marque** avec logo `bored.` et l'œil endormi interactif `(-.-)`.
+- **Sélecteur de vue** : bascule en 1 clic entre la vue **Carte**, la vue **Tableau**, ou la vue **Mixte (Split)**.
+- **Bouton Surprise Me / 🎲 Aléatoire** : tire un lieu au hasard parmi les résultats filtrés pour tuer l'ennui instantanément !
+- **Filtres améliorés** : pills à bascule personnalisées (Gratuit uniquement, Ouvert), menus déroulants thématiques, bouton radar GPS.
+- **Mascotte flottante Bored** : widget animé en bas à gauche avec l'œil endormi `(-.-)` qui réagit et propose des spots au clic.
 
 ---
 
-## Guide utilisateur & développeur
+## 🚀 Lancement du projet
 
-### Prérequis
+```bash
+cd quantic
+npm install
+npm run dev
+```
 
-- **npm**
-
-### Installation
-
-1. **Cloner le dépôt**
-	```bash
-	git clone <git@github.com:Pavelito75/QuanticFactoryTest.git>
-	cd quantic
-	```
-
-2. **Installer les dépendances**
-	```bash
-	npm install
-	```
-
-### Lancement du projet
-
-1. **Démarrer le serveur Next.js**
-	```bash
-	npm run dev
-	```
-
-2. **Accéder à l’application**
-	- [http://localhost:3000](http://localhost:3000)
-
----
-
-## Utilisation
-
-- Utilisez la barre de recherche et les filtres pour trouver des activités
-- Activez la géolocalisation pour des résultats personnalisés
-- Interface adaptée à tous les supports
-
----
-
-## Notes
-
-- Les polices Nexa sont intégrées dans le dossier `public/nexa/`
-- Les composants sont modulaires et facilement extensibles
-- Le projet est conçu pour être simple à prendre en main
-
----
-
-**Projet réalisé en 5 jours dans le cadre d’un test technique pour QuanticFactory.**
-
-**Auteur :**
-- Pavelito : Fullstack
+Accédez ensuite à l'application sur [http://localhost:3000](http://localhost:3000).
